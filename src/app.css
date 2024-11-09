@@ -1,0 +1,115 @@
+/* src/App.css */
+
+/* Container styling */
+.app-layout {
+  display: flex;
+  width: 100vw;
+  height: 100%;
+  overflow: hidden;
+}
+
+/* Main content styling to remove padding */
+.main-content {
+  display: flex; /* Aligns the sidebar and main content horizontally */
+  flex: 1;
+}
+
+/* Sidebar styling */
+.left-sidebar {
+  width: 250px;
+  background-color: #ffe6cc;
+  border-radius: 8px 0 0 8px;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* Right content styling to take up remaining space */
+.right-content {
+  flex: 1; /* Takes up the remaining space next to the sidebar */
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; /* Align form at the top */
+  padding: 20px;
+  background-color: #fff;
+  box-sizing: border-box;
+}
+
+/* Header styling */
+.header {
+  font-size: 24px;
+  color: #e74c3c;
+  font-weight: bold;
+  text-align: center;
+  margin: 20px 0;
+}
+
+.header-subtext {
+  font-size: 16px;
+  color: #777;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.image-header {
+  width: 100%;
+  height: auto;
+  margin-bottom: 20px;
+  border-radius: 8px;
+}
+
+/* Form styles */
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+form .form-group {
+  margin-bottom: 15px;
+}
+
+form label {
+  font-weight: bold;
+  color: #333;
+}
+
+form input,
+form select,
+form button {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+form input:focus,
+form select:focus,
+form button:focus {
+  outline: none;
+  border-color: #e74c3c;
+}
+
+button {
+  background-color: #e74c3c;
+  color: white;
+  font-weight: bold;
+  border: none;
+  padding: 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+button:hover {
+  background-color: #c0392b;
+}
+
+/* /* Business Info Form styling */
+.business-info-form {
+  width: 100vw; /* Full width inside the right-content container */
+  max-width: 900px; /* Adjust as needed for larger screens */
+  background-color: #fff; 
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box; 
+}

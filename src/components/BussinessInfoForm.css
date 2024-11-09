@@ -1,0 +1,199 @@
+/* General Form Container */
+body{
+  display: flex;
+  justify-content: center;
+}
+.business-info-form {
+  width: 100vw;
+  height: 100vh; /* Allow it to take full width of the screen */
+  max-width: 900px; /* Set max-width to ensure the form doesn't stretch too wide */
+  margin: 8px auto; 
+  /* Center the form horizontally */
+
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box; /* Ensures padding doesn't affect the width */
+}
+
+
+/* Title Styling */
+.form-title {
+  font-size: 24px;
+  color: #b71c1c;
+  text-align: center;
+  margin-bottom: 5px;
+}
+
+/* Form Subtitle */
+.form-subtitle {
+  font-size: 14px;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #777;
+}
+
+/* Section Title */
+.section-title {
+  font-size: 30px;
+  font-weight: bold;
+  color: #b71c1c;
+  margin-top: 15px;
+}
+
+/* Flex Row Setup for Form Fields */
+.form-row {
+  display: flex;
+  gap: 20px; /* Add spacing between fields */
+  flex-wrap: wrap; /* Allow fields to wrap on smaller screens */
+  margin-bottom: 20px;
+}
+
+/* Individual Form Group Styling */
+.form-group {
+  flex: 1; /* Distribute space equally */
+  min-width: 200px; /* Prevent shrinking too much */
+  display: flex;
+  flex-direction: column;
+}
+
+/* Label Styling */
+.form-group label {
+  font-size: 14px;
+  font-weight: 600;
+  color: rgb(255, 0, 0);
+  margin-bottom: 5px;
+}
+
+/* Input and Select Field Styling */
+.form-group input, 
+.form-group select {
+  padding: 10px;
+  font-size: 14px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  box-sizing: border-box; /* Ensures padding doesn't affect the width */
+}
+
+/* OTP Button Styling */
+.email-group .send-otp-button,
+.mobile-group .send-otp-button {
+  margin-top: 5px;
+  padding: 5px 10px;
+  background-color: #b71c1c;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 12px;
+  display: inline-block;
+}
+
+/* OTP Input Field Styling */
+.otp-input {
+  margin-top: 5px;
+  padding: 8px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.otp-input {
+  display: flex;
+  position: relative;
+  margin-bottom: 15px;
+}
+
+/* Upload Image Section */
+.upload-image-group {
+  margin-bottom: 20px;
+}
+
+.upload-image-label {
+  display: inline-block;
+  padding: 8px 15px;
+  background-color: #d6d2d2;
+  color: #fff;
+  border-radius: 4px;
+  cursor: pointer;
+  text-align: center;
+}
+
+input[type="file"] {
+  display: none; /* Hide the default file input */
+}
+
+/* Proceed Button Styling */
+.proceed-button-container {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.proceed-button {
+  background-color: #b71c1c;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+/* Input with OTP Button Inside */
+.input-with-button {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.input-with-button input {
+  flex: 1;
+  padding-right: 80px; /* Adjust based on button width */
+}
+
+.send-otp-button {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 0.5em 1em;
+  border: none;
+  background-color: #007bff; /* Button color */
+  color: white;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.send-otp-button:hover {
+  background-color: #0056b3; /* Darker shade on hover */
+}
+
+/* Mobile Responsive Design */
+@media (max-width: 768px) {
+  /* Stack the form fields vertically on small screens */
+  .form-row {
+    flex-direction: column;
+  }
+
+  .form-group {
+    flex: none; /* Prevent from stretching */
+    width: 100%; /* Make each field take the full width */
+  }
+
+  /* Adjust width of input fields in OTP section */
+  .input-with-button input {
+    width: calc(100% - 120px); /* Ensure input takes up space leaving room for button */
+  }
+
+  .send-otp-button {
+    width: 100%; /* Make the button fill the width on mobile */
+    position: static; /* Remove absolute positioning */
+  }
+
+  /* Adjust padding on smaller screens */
+  .proceed-button {
+    width: 100%;
+    padding: 12px 0;
+  }
+}

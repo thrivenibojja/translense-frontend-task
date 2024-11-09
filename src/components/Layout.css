@@ -1,0 +1,28 @@
+/* Header Styling */
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    background-color: white;
+}
+
+.header-logo {
+    width: 50%;
+    height: auto;
+    max-width: 200px; /* Adjust max width as needed */
+    margin-right: 2rem;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.header-text {
+    width: 50%;
+    text-align: left;
+}
+
+.text-danger {
+    color: red;
+}
+

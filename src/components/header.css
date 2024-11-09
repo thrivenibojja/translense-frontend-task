@@ -1,0 +1,31 @@
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;  /* Adjust to center image and space elements */
+    padding: 1rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    background-color: white;
+}
+
+.header-logo {
+    width: 150px;  /* Adjust size as needed */
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.header-text {
+    text-align: right;  /* Align text to the right */
+    flex: 1;  /* Allows the text to push to the far right */
+}
+
+p{
+    color: black;
+}
+
+
+.text-danger {
+    color: red;
+}
+
+

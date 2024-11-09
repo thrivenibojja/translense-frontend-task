@@ -1,0 +1,59 @@
+/* Layout and sidebar styling */
+/* Layout and sidebar styling */
+.sidebar {
+    background-color: #f7e7ce;
+    padding: 20px;
+    border-radius: 10px;
+    width: 250px;
+    height: 100%;
+    margin-right: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.sidebar-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.sidebar-list {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar-item {
+    padding: 15px 0;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    color: black;
+    cursor: pointer;
+}
+
+/* Remove border and increase spacing */
+.sidebar-item + .sidebar-item {
+    margin-top: 10px;
+}
+
+/* Circle styling with numbers */
+.sidebar-item::before {
+    content: attr(data-number);
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background-color: #ccc;
+    color: black;
+    margin-right: 10px;
+    font-weight: bold;
+}
+
+/* Ensure `.clicked` class applies with high specificity */
+.sidebar-item.clicked::before {
+    background-color: red !important;
+    color: white !important;
+}
